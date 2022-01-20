@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>{{title}} - Order List</title>
+</head>
+<body>
+    <h1>Order List</h1>
+    {%for order in newOrders %}
+        <div>
+            <p>
+                <a href="http://localhost:5000/orders/{{newOrders.index(order)}}">{{order.custId}}</a>
+            </p>
+            <p>
+                {{order.customer_name}} {{order.order_date}} {{order.quantity}} 
+            </p>
+        </div>
+    {% endfor%}
+</body>
+</html>
+
