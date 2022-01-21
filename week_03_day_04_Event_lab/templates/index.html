@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }} - Events</title>
+</head>
+<body>
+    <h1> Upcoming Events</h1>
+    <form action = "/events" method = "post">
+        <label for = "Date" > Date</label>
+        <input for = "Date" name = "Date">
+        
+        <label for = "Name of Event" > Name of Event</label>
+        <input for = "Name of Event" name = "Name of Event">
+
+        <label for = "Number of guests" > Number of guests</label>
+        <input for = "Number of guests" name = "Number of guests">
+
+        <label for = "Room Location" > Room Location</label>
+        <input for = "Room Location" name = "Room Location">
+
+        <label for = "Description" > Description</label>
+        <input for = "Description" name = "Description">
+
+        <input type = "submit" value = "Add Event">
+    </form>
+
+      {% for event in events %}
+    <div>
+        <p>
+            {{ event.date }} {{ event.name_of_event }} {{ event.number_of_guests }} {{ event.room_location }} {{ event.description }}
+            {% if event.done %}
+              <span>&#9989;</span>
+              {% endif %} 
+        </p>
+    </div>
+    {%endfor%}
+
+    
+
+</body>
+</html>
