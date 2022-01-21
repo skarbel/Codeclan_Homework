@@ -1,0 +1,26 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+<head>
+    <title>The Outcome</title>
+</head>
+<body>
+    <p>
+        <h1>The Outcome</h1>
+    </p>
+    <p>
+        Player 1 chose {{ player_1.choice }}
+    </p>
+    <p>
+        Player 2 chose {{ player_2.choice }}
+    </p>
+    <p>
+        {{ result }}
+    </p>
+</body>
+</html>
+
+
+
+{% endblock %}
