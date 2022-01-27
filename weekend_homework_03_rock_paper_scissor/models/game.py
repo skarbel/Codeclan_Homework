@@ -1,23 +1,27 @@
-class Game():
-    def __init__(self, player_1_choice, player_2_choice):
-        self.player_1_choice = player_1_choice
-        self.player_2_choice = player_2_choice
+import random
 
-    def compare(self):
-        if self.player_1_choice == self.player_2_choice:
-            return None
-        elif self.player_1_choice == "rock":
-            if self.player_2_choice == "paper":
-                return "Paper wins Rock. Player 2 wins"
-            else:
-                return "Rock wins Scissors. Player 1 wins"
-        elif self.player_1_choice == "paper":
-            if self.player_2_choice == "scissors":
-                return "Scissors wins Paper. Player 2 wins"
-            else:
-                return "Paper wins Rock. Player 1 wins"
-        elif self.player_1_choice == "scissors":
-            if self.player_2_choice == "rock":
-                return "Rock wins scissors. Player 2 wins"
-            else:
-                return "Scissors wins Paper. Player 1 wins"
+class Game():
+
+    def __init__(self):
+        pass
+
+    def compare(self, player_1_choice, player_2_choice):
+        if player_1_choice == player_2_choice:
+            return "Draw"
+        if player_1_choice == "rock" and player_2_choice == "paper":
+            return "Player 2 WINS by choosing paper"
+        if player_1_choice == "paper" and player_2_choice == "scissors":
+            return "Player 2 WINS by choosing scissors"
+        if player_1_choice == "scissors" and player_2_choice == "rock":
+            return "Player 2 WINS by choosing rock"
+        if player_2_choice == "rock" and player_1_choice == "paper":
+            return "Player 1 WINS by choosing paper"
+        if player_2_choice == "paper" and player_1_choice == "scissors":
+            return "Player 1 WINS by choosing scissors"
+        if player_2_choice == "scissors" and player_1_choice == "rock":
+            return "Player 1 WINS by choosing rock"
+
+    def vspc(self):
+        choices = ["rock", "paper", "scissors"]
+        pc_choice = random.choice(choices)
+        return pc_choice
