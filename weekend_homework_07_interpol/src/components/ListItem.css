@@ -1,0 +1,16 @@
+.listImage {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.list {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    
+}
+
+.listName {
+    right: 4%;
+}
