@@ -4,7 +4,6 @@ import React, {useState, useEffect} from "react";
 const InterpolDetail = ({ selectedInterpol}) => {
 
     
-
     return (
 
         <div>
